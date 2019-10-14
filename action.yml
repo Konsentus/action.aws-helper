@@ -1,5 +1,5 @@
-name: # the name of the action
-description: # additional descriptive info about the action
+name: aws-helper
+description: performs various functions using the aws-cli
 runs:
   using: 'docker'
   image: 'Dockerfile'
