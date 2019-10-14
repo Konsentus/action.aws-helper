@@ -43,5 +43,6 @@ fi
 if [ "${INPUT_TASK}" == "generate-account-id" ]; then
   assume_role
   aws_account_list=$(aws organizations list-accounts | jq '.Accounts[].Id' | sed s/\"//g  | paste -sd "," -)
+  echo $(aws_account_list)
   echo ::set-output name=ids::"${aws_account_list}"
 fi
